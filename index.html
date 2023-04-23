@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curriculo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="Imagens/Fav.ico">
+
+</head>
+<body>
+	
+
+<div id="Borda">
+	
+	<center><img src="Imagens/VMMFoto.jpg" alt="Foto"></center>
+	<h1>Bem vindo ao meu site</h1>
+
+	<div class="tab">
+	<button class="tab-button" id="tab-padrao" onclick="abrirTab(event, 'sobre')" style="justify-content: left;">Sobre Mim</button>
+	<button class="tab-button" onclick="abrirTab(event, 'curriculo')">Currículo</button>
+	<button class="tab-button" onclick="abrirTab(event, 'contato')">Contato</button>
+	</div>
+
+<div id="sobre" class="conteudo">
+	<h3>Sobre Mim</h3>
+	<p>Fui um estudante da Etec de Francisco Morato entre 2020 e 2022 aonde lá tive contato com várias coisas da área da TI como: HTML, CSS, C#, MYSQL, dentre outras coisas.</p>
+</div>
+
+<div id="curriculo" class="conteudo">
+	<h3>Veja meu currículo abaixo</h3>
+	<center><p><a href="Curriculo.pdf" target="_BLANK"><img src="Imagens/favicon.png" alt="Curriculo">Currículo</a></p></center>
+</div>
+
+<div id="contato" class="conteudo">
+	<h3>Contato Abaixo</h3>
+	<center><p><a href="https://github.com/Vinie-MM" target="_BLANK"><img src="Imagens/github.png" alt="Github" id="info"></a></p></center>
+	<center><p><a href="https://www.linkedin.com/in/vinicius-moura-b4a6a9265/" target="_BLANK"><img src="Imagens/linkedin.png" alt="Linkedin" id="info"></a></p></center>
+	<center><p><a href="mailto:viniciusmouramarques56@gmail.com" target="_BLANK"><img src="Imagens/gmail.png" alt="Email" id="info"></a></p>
+	</center>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+	
+	document.getElementById('tab-padrao').click();
+
+	function abrirTab(event, idTab){
+		var conteudos = document.getElementsByClassName('conteudo');
+
+		for (var i = 0; i < conteudos.length; i++) {
+			conteudos[i].style.display = 'none';
+		}
+
+		var tabs = document.getElementsByClassName('tab-button');
+
+		for (var i = 0; i < tabs.length; i++) {
+			tabs[i].className = tabs[i].className.replace('ativo', '');
+		}		
+
+
+		document.getElementById(idTab).style.display = 'block'
+		event.currentTarget.ClassName += ' ativo';
+	}
+</script>
+
+
+
+</body>
+</html>
