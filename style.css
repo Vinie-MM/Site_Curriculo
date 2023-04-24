@@ -15,7 +15,7 @@ body{
   border-color: white;
   overflow: auto;
   ms-overflow-style: none;
-
+  color: white;
 }
 
 #Borda::-webkit-scrollbar {
